@@ -1,0 +1,7 @@
+version: "2"
+
+services:
+  cxxhost:
+    image: cxxhost
+    volumes:
+      - ~/dev/mytest/mycxxtest:/usr/src/app 
