@@ -1,4 +1,5 @@
-docker-compose stop myspringboottest
-docker-compose rm -f myspringboottest
+docker-compose stop myspringboottest2
+docker-compose rm -f myspringboottest2
 
-docker-compose up --no-deps -d myspringboottest
+mkdir vol.gradle
+docker-compose up --no-deps -d myspringboottest2

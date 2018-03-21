@@ -6,6 +6,6 @@ import org.springframework.stereotype.Component;
 public class HelloWorld {
 
     public String hello() {
-        return "Hello World!!!";
+        return "Hello World 2 !";
     }
 }
