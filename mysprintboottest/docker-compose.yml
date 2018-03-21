@@ -1,0 +1,9 @@
+version: "2"
+
+services:
+  myspringboottest:
+    image: myspringboottest
+    ports:
+      - 28081:8080
+    volumes:
+      - ~/dev/mytest/mysprintboottest:/home/gradle/project
