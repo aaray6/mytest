@@ -29,6 +29,6 @@ dependencies {
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
-bootJar {
-	mainClassName = 'mytest.mysprintboottest.MysprintboottestApplication'
-}
+//bootJar {
+//	mainClassName = 'mytest.mysprintboottest.MysprintboottestApplication'
+//}
