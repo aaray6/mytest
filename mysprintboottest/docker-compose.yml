@@ -6,4 +6,4 @@ services:
     ports:
       - 28081:8080
     volumes:
-      - ~/dev/mytest/mysprintboottest:/home/gradle/project
+      - ~/dev/mytest/mysprintboottest:/root/project/app

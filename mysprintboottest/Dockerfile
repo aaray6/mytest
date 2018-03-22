@@ -1,12 +1,14 @@
-FROM gradle:4.6-jdk8-alpine
+FROM openjdk:8-jdk-alpine
+#FROM gradle:4.6-jdk8-alpine
 
-RUN mkdir -p /home/gradle/project
-WORKDIR /home/gradle/project
-COPY [ "src", "build.gradle", "/home/gradle/project/" ]
-RUN [ "gradle", "build", "--stacktrace" ]
-#ADD . /usr/app/app.jar
-VOLUME /home/gradle/project
-#ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/usr/app/app.jar"]
+RUN mkdir -p /root/project/app && mkdir -p /root/.gradle
+WORKDIR /root/project/app
+COPY [ "src", "/root/project/app/src/" ]
+COPY [ "build.gradle", "/root/project/app/" ]
+COPY [ "gradlew", "/root/project/app/" ]
+COPY [ "gradle", "/root/project/app/gradle/" ]
+#ENV GRADLE_USER_HOME=/root/project/.gradle
+RUN [ "./gradlew", "build" ]
+VOLUME /root/project/app
 EXPOSE 8080
-#CMD [ "/usr/app/start.sh" ]
-CMD [ "gradle",  "bootRun" ]
+CMD [ "./gradlew",  "bootRun" ]
